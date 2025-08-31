@@ -67,10 +67,6 @@ nodejs-js-demo/
    - Right-click on `src/index.html`
    - Select "Open with Live Server"
 
-4. **Access the application**
-   ```
-   ```
-
 ## 🎮 How to Use
 
 ### Basic Usage
