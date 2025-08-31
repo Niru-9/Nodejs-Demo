@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running JavaScript with Node.js</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Running JavaScript with Node.js</h1>
+            <p class="subtitle">Learn how to execute JavaScript code outside the browser</p>
+        </header>
+        
+        <div class="content">
+            <div class="explanation">
+                <h2>What is Node.js?</h2>
+                <p>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows you to run JavaScript code on your computer as a standalone program, not just in a browser.</p>
+                
+                <div class="feature">
+                    <h3>Key Advantages of Node.js</h3>
+                    <ul>
+                        <li>Allows JavaScript to run on the server-side</li>
+                        <li>Provides access to the file system and operating system</li>
+                        <li>Has a huge ecosystem of packages via npm</li>
+                        <li>Excellent for building web servers and CLI tools</li>
+                    </ul>
+                </div>
+                
+                <h2>How to Install Node.js</h2>
+                <div class="steps">
+                    <ol>
+                        <li>Visit the official Node.js website at <a href="https://nodejs.org" target="_blank" style="color: #3498db;">nodejs.org</a></li>
+                        <li>Download the LTS (Long Term Support) version for your operating system</li>
+                        <li>Run the installer and follow the installation instructions</li>
+                        <li>Verify the installation by opening a terminal and typing:
+                            <pre>node --version</pre>
+                        </li>
+                    </ol>
+                </div>
+                
+                <h2>Running JavaScript with Node.js</h2>
+                <div class="terminal">
+                    <p><span class="prompt">$</span> <span class="command">node</span></p>
+                    <p>> console.log("Hello, Node.js!")</p>
+                    <p>Hello, Node.js!</p>
+                    <p>> .exit</p>
+                    <br>
+                    <p><span class="prompt">$</span> <span class="command">node my-script.js</span></p>
+                    <p>Hello from my script!</p>
+                </div>
+                
+                <div class="examples">
+                    <h2>Try These Node.js Examples</h2>
+                    <div class="example-btns">
+                        <button class="example-btn" onclick="loadExample(1)">File System Operations</button>
+                        <button class="example-btn" onclick="loadExample(2)">HTTP Server</button>
+                        <button class="example-btn" onclick="loadExample(3)">Module Example</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="code-area">
+                <h2>Try JavaScript Code (Browser)</h2>
+                
+                <div class="editor">
+                    <textarea id="js-code" placeholder="Enter your JavaScript code here...">// Simple JavaScript example
+console.log("Hello, World!");
+
+function factorial(n) {
+    if (n === 0 || n === 1) return 1;
+    return n * factorial(n - 1);
+}
+
+console.log("Factorial of 5:", factorial(5));
+
+// Additional examples
+const fruits = ['apple', 'banana', 'cherry'];
+console.log("Fruits:", fruits);
+
+// Current date and time
+console.log("Current time:", new Date().toLocaleTimeString());</textarea>
+                </div>
+                
+                <div class="buttons">
+                    <button id="run-btn" onclick="runCode()">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                        </svg>
+                        Run Code
+                    </button>
+                    <button id="clear-btn" onclick="clearOutput()">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                        </svg>
+                        Clear Output
+                    </button>
+                </div>
+                
+                <h2>Output</h2>
+                <div id="output" class="output"></div>
+                
+                <h2>Node.js vs Browser JavaScript</h2>
+                <div class="steps">
+                    <p><strong>In Node.js you can:</strong></p>
+                    <ul>
+                        <li>Access the file system</li>
+                        <li>Create web servers</li>
+                        <li>Run shell commands</li>
+                        <li>Use environment variables</li>
+                    </ul>
+                    
+                    <p><strong>In the browser you can:</strong></p>
+                    <ul>
+                        <li>Manipulate the DOM</li>
+                        <li>Interact with user events</li>
+                        <li>Use browser APIs</li>
+                        <li>Make HTTP requests</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Created for learning Node.js and JavaScript | Refresh the page to reset</p>
+        </footer>
+    </div>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
