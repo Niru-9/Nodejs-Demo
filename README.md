@@ -212,14 +212,6 @@ SOFTWARE.
 - Inspired by online code editors and learning platforms
 - Built with modern web development best practices
 - Special thanks to contributors and users who provide feedback
-
-## 📊 Stats
-
-![GitHub stars](https://img.shields.io/github/stars/your-username/nodejs-js-demo?style=social)
-![GitHub forks](https://img.shields.io/github/forks/your-username/nodejs-js-demo?style=social)
-![GitHub issues](https://img.shields.io/github/issues/your-username/nodejs-js-demo)
-![GitHub license](https://img.shields.io/github/license/your-username/nodejs-js-demo)
-
 ---
 
 ⭐ **If this project helped you, please consider giving it a star!**
